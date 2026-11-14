@@ -22,7 +22,7 @@ My Fedora dev configs, managed with [GNU Stow](https://www.gnu.org/software/stow
 sudo dnf install stow
 git clone git@github.com:chamals3n4/dotfiles.git ~/dotfiles
 cd ~/dotfiles
-stow zsh git gh oh-my-posh ghostty kitty zed vscode htop
+./install.sh
 ````
 
 Also needs: zsh, Oh My Posh, NVM, SDKMAN!, pnpm, Go, .NET SDK

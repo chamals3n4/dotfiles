@@ -21,3 +21,5 @@ link kitty      "$HOME/.config/kitty"
 link zed        "$HOME/.config/zed"
 link vscode     "$HOME/.config/Code/User"
 link htop       "$HOME/.config/htop"
+# nvim: link the whole folder so LazyVim's new files are saved in the repo
+ln -sfn "$PWD/nvim" "$HOME/.config/nvim" && echo "✓ nvim → $HOME/.config/nvim"

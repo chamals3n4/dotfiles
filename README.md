@@ -1,65 +1,28 @@
-My Linux development environment managed with chezmoi.
+# dotfiles
 
-Managed Configurations
+My Fedora dev configs, managed with [GNU Stow](https://www.gnu.org/software/stow/).
 
-- Zsh (`.zshrc`, `.zshenv`)
-- Git (`.gitconfig`)
-- Oh My Posh theme
-- htop
-- neofetch
+## What's inside
 
-Requirements
+| Folder | Config |
+|---|---|
+| `zsh` | `.zshrc`, `.zshenv` |
+| `git` | `.gitconfig` |
+| `gh` | GitHub CLI settings |
+| `oh-my-posh` | prompt theme |
+| `ghostty` | Ghostty terminal |
+| `kitty` | kitty terminal |
+| `zed` | Zed editor settings + themes |
+| `vscode` | VS Code settings |
+| `htop` | htop settings |
 
-- Git
-- Zsh
-- chezmoi
-- Oh My Posh
-- NVM
-- SDKMAN!
-- pnpm
-- Go
-- .NET SDK
+## Setup
 
-Bootstrap
+````bash
+sudo dnf install stow
+git clone git@github.com:chamals3n4/dotfiles.git ~/dotfiles
+cd ~/dotfiles
+stow zsh git gh oh-my-posh ghostty kitty zed vscode htop
+````
 
-Install chezmoi:
-
-```bash
-sh -c "$(curl -fsLS https://get.chezmoi.io)"
-```
-
-Initialize from GitHub:
-
-```bash
-chezmoi init git@github.com:chamals3n4/dotfiles.git
-```
-
-Apply the configuration:
-
-```bash
-chezmoi apply
-```
-
-Updating Configurations
-
-Edit a managed file directly:
-
-```bash
-chezmoi add ~/.zshrc
-```
-
-Or edit using chezmoi:
-
-```bash
-chezmoi edit ~/.zshrc
-chezmoi apply
-```
-
-Commit and push changes:
-
-```bash
-cd ~/.local/share/chezmoi
-git add .
-git commit -m "Update configuration"
-git push
-```
+Also needs: zsh, Oh My Posh, NVM, SDKMAN!, pnpm, Go, .NET SDK

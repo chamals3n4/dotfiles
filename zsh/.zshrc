@@ -35,6 +35,7 @@ alias gp='git push'
 alias gpl='git pull'
 alias gco='git checkout'
 alias gb='git branch'
+alias code='code .'
 
 # General
 alias c='clear'
@@ -70,3 +71,27 @@ fi
 
 # .NET Tools
 export PATH="$PATH:$HOME/.dotnet/tools"
+
+export PATH="$HOME/tools/flutter/bin:$PATH"
+export CHROME_EXECUTABLE=$(which brave-browser)
+
+alias cs="rm -f ~/Pictures/Screenshots/*"
+export QT_QPA_PLATFORM=xcb
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$ANDROID_HOME/platform-tools:$ANDROID_HOME/emulator:$PATH
+
+# opencode
+export PATH=/home/chamal/.opencode/bin:$PATH
+export KUBE_EDITOR="zed --wait"
+
+# pnpm
+export PNPM_HOME='/home/chamal/.local/share/pnpm'
+case ":$PATH:" in
+  ":$PNPM_HOME/bin:"*) ;;
+  *) export PATH="$PNPM_HOME/bin:$PATH" ;;
+esac
+# pnpm end
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/chamal/.local/bin:$PATH"

@@ -95,3 +95,4 @@ esac
 
 # Added by Antigravity CLI installer
 export PATH="/home/chamal/.local/bin:$PATH"
+alias reload='source ~/.zshrc'
